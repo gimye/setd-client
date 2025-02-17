@@ -1,0 +1,131 @@
+.noto-sans-kr-500 {
+  font-family: "Noto Sans KR", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.logo {
+  width: 35vw;
+  height: 9vh;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue-600);
+}
+
+.logo div {
+  font-family: "Noto Sans KR";
+  font-weight: 800;
+  font-size: 4vh;
+  text-align: center;
+  margin: 0;
+  color: var(--color-neutral-50);
+}
+
+.input_container {
+  margin-top: 5vh;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 35vw;
+  margin-bottom: 1vh;
+  height: 6vh;
+}
+
+.input_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Noto Sans KR";
+  font-weight: 800;
+  font-size: 2.5vh;
+  text-align: center;
+  margin: 0;
+  color: var(--color-neutral-950);
+  width: 10vw;
+  background-color: var(--color-blue-200);
+  border-radius: 10px;
+  height: 100%;
+  margin-right: 1vw;
+}
+
+.username {
+  width: 14vw;
+  border-radius: 10px;
+  height: 5vh;
+  background-color: transparent;
+  border: 2px solid var(--color-blue-600);
+}
+
+.password {
+  width: 24vw;
+  border-radius: 10px;
+  height: 5vh;
+  background-color: transparent;
+  border: 2px solid var(--color-blue-600);
+}
+
+.buttonbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 35vw;
+  margin-bottom: 1vh;
+  height: 6vh;
+}
+
+.buttonbox button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Noto Sans KR";
+  font-weight: 800;
+  font-size: 2.5vh;
+  text-align: center;
+  width: 8vw;
+  border-radius: 10px;
+  height: 100%;
+  border: none;
+}
+
+.buttonbox button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.buttonbox button:active {
+  background-color: #d0d0d0;
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.signup_btn {
+  background-color: var(--color-red-250);
+  color: white;
+}
+
+.login_btn {
+  background-color: var(--color-blue-600);
+  color: white;
+  margin-left: 1vw;
+}

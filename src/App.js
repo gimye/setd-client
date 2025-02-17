@@ -1,21 +1,29 @@
 import './App.css';
-import Calendar from './components/calendar/Calendar';
-import ExpencesContainer from './components/expences/ExpencesContainer';
-import ProfileHeader from './components/header/ProfileHeader';
-import Day from './components/day/Day';
-import { createCSSVariables } from './color.js';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Main from './routes/main/Main';
+import Login from './routes/login/Login';
+import Register from './routes/register/Register';
+import { createCSSVariables } from '../src/styles/color';
 
 createCSSVariables();
 
+const PrivateRoute = ({ children }) => {
+  const hasAccessToken = localStorage.getItem('accessToken') !== null;
+  return hasAccessToken ? children : <Navigate to="/login" />;
+};
 
 function App() {
   return (
-    <div className="App">
-      <ProfileHeader />
-      <Calendar />
-      <Day />
-      <ExpencesContainer />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<PrivateRoute><Main /></PrivateRoute>}/>
+
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
