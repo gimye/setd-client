@@ -1,11 +1,19 @@
+/* 전역 폰트 설정 */
+:global(*) {
+   font-family: "Noto Sans KR", serif;
+   font-optical-sizing: auto;
+   font-weight: 900;
+   font-style: normal;
+}
+
 .calendar_container {
    width: 55vw;
-   height: 60vh;
+   height: 70vh;
    border: 2px solid var(--color-neutral-950);
    border-radius: 25px;
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: flex-start;
    align-items: center;
 }
 
@@ -21,7 +29,7 @@
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
-   margin: 0;
+   margin-bottom: 1vh !important;
    width: 100%;
 }
 
@@ -30,27 +38,32 @@
    width: 35vw !important;
    text-align: center;
    font-weight: bold;
+   font-size: 20px;
 }
 
 :global(.react-calendar__navigation) button {
    background: none;
 }
 
-
 :global(.react-calendar__navigation__arrow) {
    font-size: 1.5em;
    color: var(--color-neutral-950);
 }
 
+:global(.react-calendar__month-view__weekdays) {
+  border-bottom: 2px solid var(--color-neutral-950);
+  padding-bottom: 2vh;
+  margin-bottom: 2vh;
+}
+
 :global(.react-calendar__month-view__weekdays__weekday) {
    text-transform: uppercase;
-   
 }
 
 :global(.react-calendar__month-view__weekdays__weekday abbr) {
    text-decoration: none;
    border-bottom: none;
- }
+}
 
 :global(.react-calendar__month-view__weekdays__weekday:first-child) abbr,
 :global(.react-calendar__month-view__days__day:nth-child(7n+1)) {
@@ -81,37 +94,24 @@
 
 :global(.react-calendar__navigation__prev-button) {
    background-image: url('../../icons/back.png') !important;
-   background-size: 8px !important;
+   background-size: 10px !important;
 }
 
 :global(.react-calendar__navigation__next-button) {
    background-image: url('../../icons/next.png') !important;
-   background-size: 8px !important;
+   background-size: 10px !important;
 }
 
-:global(.react-calendar__month-view__days__day) {
+:global(.react-calendar__month-view__days__day),
+:global(.react-calendar__tile) {
    width: 7vw !important;
    height: 8.3vh !important;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border: none !important;
-   background-color: var(--color-neutral-50);
-   margin: 0 !important;
-   padding: 0 !important;
- }
- 
- :global(.react-calendar__tile) {
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
    align-items: center;
-   padding-top: 5px !important;
- }
-
- :global(.react-calendar__tile) {
    border: none !important;
+   background-color: transparent;
    margin: 0 !important;
-   padding: 0 !important;
- }
- 
+   padding: 5px 0 0 0 !important;
+}
